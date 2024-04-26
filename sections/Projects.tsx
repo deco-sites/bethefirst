@@ -28,7 +28,7 @@ export default function Projects({ title, projects }: Props) {
             <li className="flex" key={index}>
               <a href={project.link} className="grid grid-cols-2 w-full">
                 <div className={`p-4 ${project.order}`}>
-                  <h3 className="text-white">{project.name}</h3>
+                  <h3 className="text-white font-bold">{project.name}</h3>
                 </div>
                 <div
                   className={`${
