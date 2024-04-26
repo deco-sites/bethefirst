@@ -8,7 +8,6 @@ export interface Props {
    return (
      <div
        className="bg-cover bg-no-repeat h-screen"
-
        style={`background-image: url('${image}')`}
      >
        <div className="flex flex-col items-center">
