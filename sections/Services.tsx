@@ -22,7 +22,14 @@ export default function Services({ text, services }: Props) {
         </div>
         <ul className="grid grid-cols-2">
           {services.map((service, index) => (
-            <li key={index} className={`border-b border-zinc-200`}>
+            <li
+              key={index}
+              className={`${
+                index + 2 < services.length && "border-b"
+              } border-zinc-200 ${
+                index === 0 || index % 2 == 0 ? "border-e" : ""
+              }`}
+            >
               <a
                 href="/"
                 className="flex flex-col justify-between p-8 min-h-80 min-w-80"
@@ -31,8 +38,10 @@ export default function Services({ text, services }: Props) {
                   <h3 className="text-white">{service.title}</h3>
                 </div>
                 <div className="flex justify-end items-center gap-4">
-                  <p className="text-white m-0">{service.text}</p>
-                  <span className="text-white text-8xl font-bold">
+                  <p className="text-white m-0 text-sm max-w-80">
+                    {service.text}
+                  </p>
+                  <span className="text-white text-9xl font-bold">
                     {service.number}
                   </span>
                 </div>
